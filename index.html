@@ -260,7 +260,10 @@
                         <a href="https://github.com/sohamkhair31" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:text-indigo-800 font-medium flex items-center">
                             View Project <i class="fas fa-external-link-alt ml-2 text-sm"></i>
                         </a>
-                    
+                        <button id="enhance-project1" class="bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-purple-600 transition duration-300 ease-in-out flex items-center">
+                            <span id="enhance-project1-text">✨ Enhance Description</span>
+                            <span id="enhance-project1-spinner" class="spinner hidden"></span>
+                        </button>
                     </div>
                 </div>
                 <div class="project-card bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-2 border border-gray-200">
@@ -271,7 +274,10 @@
                         <a href="https://github.com/sohamkhair31" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:text-indigo-800 font-medium flex items-center">
                             View Project <i class="fas fa-external-link-alt ml-2 text-sm"></i>
                         </a>
-                        
+                        <button id="enhance-project2" class="bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-purple-600 transition duration-300 ease-in-out flex items-center">
+                            <span id="enhance-project2-text">✨ Enhance Description</span>
+                            <span id="enhance-project2-spinner" class="spinner hidden"></span>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -295,7 +301,10 @@
                         <a href="https://github.com/sohamkhair31" target="_blank" rel="noopener noreferrer" class="text-orange-600 hover:text-orange-800 font-medium flex items-center">
                             Learn More <i class="fas fa-info-circle ml-2 text-sm"></i>
                         </a>
-                       
+                        <button id="enhance-project3" class="bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-purple-600 transition duration-300 ease-in-out flex items-center">
+                            <span id="enhance-project3-text">✨ Enhance Description</span>
+                            <span id="enhance-project3-spinner" class="spinner hidden"></span>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -415,28 +424,6 @@
                         descriptionElement.textContent = enhancedText; // Update the description
                     } else {
                         console.error('Gemini API response structure unexpected:', result);
-                        descriptionElement.textContent = "Failed to enhance description. Please try again.";
-                    }
-                } catch (error) {
-                    console.error('Error calling Gemini API:', error);
-                    descriptionElement.textContent = "Error enhancing description. Please check your network connection.";
-                } finally {
-                    // Reset button state
-                    enhanceButton.disabled = false;
-                    enhanceButtonText.textContent = '✨ Enhance Description';
-                    enhanceButtonSpinner.classList.add('hidden');
-                }
-            }
-
-            // Attach event listeners to enhance buttons
-            document.getElementById('enhance-project1').addEventListener('click', () => enhanceDescription('project1', 'project1-desc'));
-            document.getElementById('enhance-project2').addEventListener('click', () => enhanceDescription('project2', 'project2-desc'));
-            document.getElementById('enhance-project3').addEventListener('click', () => enhanceDescription('project3', 'project3-desc')); // New upcoming project
-        });
-    </script>
-
-</body>
-</html>ected:', result);
                         descriptionElement.textContent = "Failed to enhance description. Please try again.";
                     }
                 } catch (error) {
